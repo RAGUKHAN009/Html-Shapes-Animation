@@ -1,0 +1,415 @@
+/* GENERAL CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* MAIN CSS STARTS HERE */
+
+.HeroCont {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.PentagonCont {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.pentagonAlign {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* FirstPentagopn */
+
+.Pentagon1 {
+    position: absolute;
+    right: 20%;
+    bottom: 30%;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.Pentagon1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+/* SecondPentagopn */
+
+.Pentagon2 {
+    position: absolute;
+    right: 20%;
+    bottom: 30%;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.Pentagon2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+/* ThirdPentagopn */
+
+.Pentagon3 {
+    position: absolute;
+    right: 20%;
+    bottom: 30%;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.Pentagon3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.PentagonText {
+    width: 100%;
+    height: 210px;
+    z-index: 10;
+    position: absolute;
+    top: 100px;
+    left: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PentagonTextAlign {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.textCart {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8vw;
+}   
+
+.TextC1 {
+    left: calc(20% + 3%);
+    opacity: 1;
+    background-color: red;
+}
+
+.TextC2 {
+    left: calc(70% + 6%);
+    background-color: gainsboro;
+    opacity: 0;
+}
+
+.TextC3 {
+    left: -30%;
+    background-color: brown;
+    opacity: 0;
+}
+
+.Text1 {
+    left: calc(70% + 6%);
+    animation: Text2 1s linear forwards;
+    opacity: 0;
+    z-index: 1; 
+}
+
+@keyframes Text2 {
+    to {
+        opacity: 1;
+        left: calc(20% + 3%);   
+        z-index: 3;
+    }
+}
+
+.Text3 {
+    opacity: 1;
+    left: calc(20% + 3%);   
+    z-index: 3;
+    animation: Text3 1s linear forwards;
+}
+@keyframes Text3 {
+    to {
+        opacity: 0;
+        left: -30%;
+        z-index: 1;
+    }
+}
+
+.Text2 {
+    opacity: 0;
+    left: -30%;
+    z-index: 1;
+    animation: Text1 1s linear forwards;
+}
+@keyframes Text1 {
+    to {
+        opacity: 0;
+        left: calc(70% + 6%);
+        z-index: 1;
+    }
+}
+
+
+
+/* ANIMATOION OF PENTAGON */
+
+.carr1 {
+    opacity: 1;
+    z-index: 3;
+    rotate: 90deg;
+    animation: HidePentagon1 1s linear forwards;
+}
+
+@keyframes HidePentagon1 {
+    to {
+        opacity: 0;
+        z-index: 2;
+        rotate: 135deg;
+        transition: 1s ease all;
+        display: none;
+    }
+}
+
+.carr2 {
+    opacity: 1;
+    z-index: 3;
+    rotate: 45deg;
+    animation: HidePentagon1 1s linear forwards;
+}
+
+@keyframes HidePentagon1 {
+    to {
+        opacity: 0;
+        z-index: 2;
+        rotate: 90deg;
+        transition: 1s ease all;
+        display: none;
+    }
+}
+
+
+.carr3 {
+    opacity: 0;
+    animation: ShowPentagon1 1s linear forwards;
+}
+
+@keyframes ShowPentagon1 {
+    to {
+        opacity: 1;
+        z-index: 3;
+        rotate: 45deg;
+        transition: 1s ease all;
+    }
+}
+
+
+/* MAIN CONTEND */
+
+.MainContendHerpo {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.MainContendAlign {
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}   
+
+.Cart1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    opacity: 1;
+}
+
+.Cart2 {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 10px);
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    opacity: 0;
+}
+
+.Cart3 {
+    position: absolute;
+    top: 0;
+    left: calc(200% + 10px);
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    opacity: 0;
+}
+
+.car1 {
+    left: calc(100% + 10px);
+    opacity: 0;
+    animation: ShowCar1 1s linear forwards;
+    z-index: 1;
+}
+
+@keyframes ShowCar1 {
+    to {
+        left: calc(0%);
+        opacity: 1;
+        z-index: 3;
+    }
+}
+
+.car2 {
+    left: calc(-100% - 10px);
+    opacity: 0;
+    animation: ShowCar2 1s linear forwards;
+    z-index: 1;
+}
+
+@keyframes ShowCar2 {
+    to {
+        left: calc(0%);
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+.car3 {
+    left: calc(0%);
+    opacity: 1;
+    animation: ShowCar3 1s linear forwards;
+    z-index: 3;
+}
+
+@keyframes ShowCar3 {
+    to {
+        left: calc(-100% - 10px);
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+.Car {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+}
+
+
+
+
+
+
+
+
+.NavMainCont {
+    width: 100%;
+    height: 80px;
+    background-color: antiquewhite;
+    position: absolute;
+    bottom: 40px;
+    z-index: 10;
+}
+
+.NavMainCont button {
+    width: 100%;
+    height: 100%;
+}
+
+.RightNavs {
+    height: 80%;
+    right: 40px;
+    width: 80px;
+    background-color: red;
+    position: absolute;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RightNavAlign {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: yellow;
+}
+
+.RNav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 10vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Nav1 {
+    background-color: red;
+    z-index: 3;
+}
+
+.Nav2 {
+    background-color: pink;
+    z-index: 2;
+}
+
+.Nav3 {
+    background-color: gold;
+    z-index: 1;
+}
+
+.cartt3 {
+    z-index: 2;
+}
+
+.cartt1 {
+    z-index: 3;
+}
+
+.cartt2 {
+    z-index: 1;
+}
